@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcases>
+<testcase name="Авторизация"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Создание"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="User"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Права наследуются от Default группы"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="User group"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="User role"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Folder"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Project"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Loadcase"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Simulation"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Storyboard"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Document"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="DMU"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Part"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Chart"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Wiki"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="S|Type"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Submodel"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Один файл"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Мультизагрузка"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="C|Submodel"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Мультизагрузка"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="MV"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Issue"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Issue config"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Project|T"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Cluster"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Tuning"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Solver"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Target group"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Target"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Клонирование"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Simulation"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Storyboard"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Document"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="DMU"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Chart"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Wiki"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Submodel"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="C|Submodel"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="MV"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Issue config"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Issue"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Project|T"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Редактирование (Name, path etc.)"><summary>Для каждой сущности изменить пару параметров на выбор
+</summary><importance>Medium
+</importance></testcase><testcase name="User"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Изменить параметры пользователя"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Добавить пользователя в группу и назначить роль"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="User group"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="User role"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Folder"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Изменить параметры папки"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Конвертация в Project"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Project"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Loadcase"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Storyboard"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Simulation"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Simulation with submodels"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Add"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="New"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Existing"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Document"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="DMU"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Part"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Chart"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Wiki"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="S|Type"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Submodel"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="C|Submodel"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="MV"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Изменение субмоделей мультиварианта"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Add"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Matrix"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Variate"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Variable"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Issue"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Issue config"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Project|T"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Cluster"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Tuning"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Solver"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Target group"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Target"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Run"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Задачи запускаются на кластерах"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Bench"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Slurm"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Torque"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Data check"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Solving"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Results"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Solving with postproc"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Results"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Postproc after solving"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Results"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Доступна страница очереди (Queue)"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Изменить задачу в статусе Waiting"><summary>Изменяются только Bench задачи
+</summary><importance>Medium
+</importance></testcase><testcase name="Остановить задачу в статусе Running"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Переходит в статус Terminated"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Submodel"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Parsing by meta"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="DMU"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="Просмотр модели"><summary>
+</summary><importance>Medium
+</importance></testcase><testcase name="После запуска DMU на парсинг статус в шапке страницы сменяется на PARSED"><summary>
+</summary><importance>Medium
+</importance></testcase></testcases>
