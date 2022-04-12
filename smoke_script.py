@@ -1,11 +1,11 @@
 import csv
 import xml.etree.ElementTree as ET
 
-csvFile = 'C:/Users/Серж/Desktop/testcases_CRP/scripts/smoke/smoke.csv'
-xmlFile = 'C:/Users/Серж/Desktop/testcases_CRP/converted_scripts/smoke/smoke.xml'
+csvFile = 'C:/Users/Серж/Desktop/testcases_CRP/scripts/to-sort-out/target_library_20212_20213.csv'
+xmlFile = 'C:/Users/Серж/Desktop/testcases_CRP/converted_scripts/to-sort-out/target_library_20212_20213.xml'
 p = ET.Element('testsuite')
 ind = '\n'
-suiteName = 'smoke'
+suiteName = 'target_library_20212_20213'
 
 
 with open(csvFile, 'r', newline='', encoding='utf-8') as rf, open(xmlFile, 'w', newline='', encoding='utf-8') as wf:
