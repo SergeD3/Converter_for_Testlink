@@ -1,14 +1,15 @@
 import csv
 import xml.etree.ElementTree as ET
+from poligon import *
 
-fName = 'smoke'
-dirName = 'smoke'
+dirName = 'general-regression-actual-versions'
+fName = 'reg-approvals'
+pastiter = []
+suite_num = []
+p = ET.Element('testsuite')
 re = '\n'
 csvFile = 'C:/Users/Серж/Desktop/testcases_CRP/scripts/' + dirName + '/' + fName + '.csv'
 xmlFile = 'C:/Users/Серж/Desktop/testcases_CRP/converted_scripts/' + dirName + '/' + fName + '.xml'
-p = ET.Element('testsuite')
-pastiter = []
-suite_num = []
 
 
 with open(csvFile, 'r', newline='', encoding='utf-8') as rf, open(xmlFile, 'w', newline='', encoding='utf-8') as wf:
@@ -30,11 +31,11 @@ with open(csvFile, 'r', newline='', encoding='utf-8') as rf, open(xmlFile, 'w', 
         elif int(ind) > 1:
             el2 = ET.SubElement(el1, 'testcase' + re)
             el2.set('name', txt)
-            subel0 = ET.SubElement(el2, 'externalid')
+#           subel0 = ET.SubElement(el2, 'externalid')
             subel1 = ET.SubElement(el2, 'summary')
             subel2 = ET.SubElement(el2, 'importance')
 
-            subel0.text = numb
+#            subel0.text = numb
             subel1.text = nts
             subel2.text = "Medium"
 
