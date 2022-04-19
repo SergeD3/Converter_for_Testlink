@@ -1,25 +1,31 @@
 import os
-from pathlib import *
 
 
-fName = 'smoke'
-dirName = 'smoke'
-csvFile = 'C:/Users/Серж/Desktop/testcases_CRP/scripts/' + dirName + '/' + fName + '.csv'
-xmlFile = 'C:/Users/Серж/Desktop/testcases_CRP/converted_scripts/' + dirName + '/' + fName + '.xml'
-
-csv_path = 'C:/Users/Серж/Desktop/testcases_CRP/scripts/general-regression-actual-versions/'
 filelist = []
-nameslist = []
+dirName = 'general-regression-actual-versions'
+full_path = 'C:/Users/Серж/Desktop/testcases_CRP/scripts/' + dirName + '/'
+ret = []
+ff = {}
 
 
-def getpath(csv_path):
-    for root, dirs, files in os.walk(csv_path):
-        for file in files:
-            filelist.append(os.path.join(root, file))
-    for name in filelist:
-        nameslist = name
-        return nameslist
+def getpath(x):
+    i = 0
+    for file in os.listdir(x):
+        i += 1
+        if file.endswith(".csv"):
+            filelist.insert(i-1, os.path.join(x, file))
+            ret.insert(i, file)
+        _try = {'name': ret, 'path': filelist}
+    return _try
 
 
-# def lstnmb(x, i):   функция для сохранения значения numb == 1 из цикла
-#     pastiter.insert(i, x)
+def getnames():
+    i = 0
+    ff = getpath(full_path)
+    for m in range(len(ff['name'])):
+        i += 1
+        retname = ff.get('name')
+#        retpath = ff.get('path')
+        ns = str(retname[i-1])
+        ns1 = ns.rpartition('.')[0] # обрезаем у каждого name расширение .csv
+        return ns1
