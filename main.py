@@ -1,55 +1,47 @@
-import csv
-import xml.etree.ElementTree as ET
-import fileinput
-import pathlib
+if __name__ == "__main__":
+    import csv
+    import xml.etree.ElementTree as ET
+    from poligon import getpath, getnames
 
-csvFile = 'smoke.csv'
-xmlFile = 'smoke_new.xml'
-li = []
-p = ET.Element('testcases')
+    dirName = 'general-regression-actual-versions'
+    full_path = 'C:/Users/Серж/Desktop/testcases_CRP/scripts/' + dirName + '/'
 
+    i = 0
+    a = 0
+    namelist = []
+    pastiter = []
+    suite_num = []
+    p = ET.Element('testsuite')
+    re = '\n'
+    csvFile = getpath(full_path)
+    filename = getnames(full_path)
 
-with open(csvFile, 'r', newline='', encoding='unicode') as rf, open(xmlFile, 'w', newline='', encoding='unicode') as wf:
-    reader = csv.DictReader(rf, delimiter=",")
-    writer = csv.writer(wf)
-    wf.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n")
-    for row in reader:
-        el1 = ET.SubElement(p, 'testcase')
-        subel1 = ET.SubElement(el1, 'summary \n')
-        subel2 = ET.SubElement(el1, 'importance \n')
-        mydata = ET.tostring(p, encoding='utf-8')
-#        mydata.encode('unicode')
+    while a < len(filename):
+        i += 1
+        a += 1
+        csvfile1 = csvFile['path'][i-1]
+        xmlfile = 'C:/Users/Серж/Desktop/testcases_CRP/converted_scripts/' + dirName + '/' + str(filename[i-1]) + '.xml'
+        with open(csvfile1, 'r', newline='', encoding='utf-8') as rf, open(xmlfile, 'w', newline='', encoding='utf-8') as wf:
+            reader = csv.DictReader(rf, delimiter=",")
+            for row in reader:
+                numb = row['number']
+                ind = row['indent']
+                txt = row['text']
+                nts = row['notes']
 
-        el1.text = row['text']
-        subel1.text = row['notes']
-        subel2.text = "Medium"
-        myfile = open('smoke_new.xml', 'w')
-        myfile.write(mydata)
+                if int(ind) == 1:
+                    p.set('name', filename[i-1])
+                    el1 = ET.SubElement(p, 'testsuite' + re)
+                    el1.set('name', txt)
+                #            el1.text = re
 
+                elif int(ind) > 1:
+                    el2 = ET.SubElement(el1, 'testcase' + re)
+                    el2.set('name', txt)
+                    el2.set('internalid', ind)
+                    #           subel0 = ET.SubElement(el2, 'externalid')
+                    subel1 = ET.SubElement(el2, 'summary')
+                    #            subel0.text = numb
+                    subel1.text = nts
 
-
-# a = read()
-# for i in range(len(li)):
-#      print('i[0]', 'i[1]')
-
-    # tstcases = ET.Element('testcases')
-    # tstcase = ET.SubElement(tstcases, 'testcase')
-    # tree = ET.ElementTree(tstcases)
-    # wf.write('<?xml version="1.0" encoding="UTF-8"?>' + "\n")
-    # for row in reader:
-    #     wf.write("<testcases>" + '%s' + "</testcases>")
-
-
-
-
-
-
-    # for row in reader:
-    #     titles = [row['text'], row['notes']]
-    #
-    # with open("smoke_new.xml", 'a', newline='', encoding='utf-8') as csvfile:
-    #     writer = csv.writer(csvfile, delimiter=",")
-    #     writer.writerow(['<testcases>'])
-    #     for u in titles:
-    #         writer.writerow(u['text'], u['notes'])
-    #     writer.writerow(['</testcases>'])
+            ET.ElementTree(p).write(xmlfile, encoding="UTF-8", xml_declaration=True)

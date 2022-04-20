@@ -1,31 +1,27 @@
 import os
 
 
-filelist = []
-dirName = 'general-regression-actual-versions'
-full_path = 'C:/Users/Серж/Desktop/testcases_CRP/scripts/' + dirName + '/'
-ret = []
-ff = {}
-
-
 def getpath(x):
     i = 0
+    filelist = []
+    onlyname = []
+    dictpath = {}
     for file in os.listdir(x):
-        i += 1
         if file.endswith(".csv"):
             filelist.insert(i-1, os.path.join(x, file))
-            ret.insert(i, file)
-        _try = {'name': ret, 'path': filelist}
-    return _try
+            onlyname.insert(i-1, file)
+            dictpath = {'path': filelist, 'name': onlyname}
+        i += 1
+    return dictpath
 
 
-def getnames():
+def getnames(y):
     i = 0
-    ff = getpath(full_path)
+    ns1 = []
+    ff = getpath(y)
     for m in range(len(ff['name'])):
         i += 1
         retname = ff.get('name')
-#        retpath = ff.get('path')
         ns = str(retname[i-1])
-        ns1 = ns.rpartition('.')[0] # обрезаем у каждого name расширение .csv
-        return ns1
+        ns1.insert(i, '.'.join(ns.split('.')[:-1])) # обрезаем у каждого name расширение .csv и собираем строку обратно
+    return ns1
