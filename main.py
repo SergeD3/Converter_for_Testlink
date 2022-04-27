@@ -20,7 +20,6 @@ if __name__ == "__main__":
         csvfile1 = csvFile['path'][i]
         xmlfile1 = str(filename[i])
         xmlfile = 'C:/Users/Серж/Desktop/testcases_CRP/converted_scripts/' + dirName + '/' + xmlfile1 + '.xml'
-        i += 1
         with open(csvfile1, 'r', newline='', encoding='utf-8') as rf, open(xmlfile, 'w', newline='', encoding='utf-8') as wf:
             reader = csv.DictReader(rf, delimiter=",")
             for row in reader:
@@ -28,7 +27,6 @@ if __name__ == "__main__":
                 ind = row['indent']
                 txt = row['text']
                 nts = row['notes']
-
                 if int(ind) <= 1:
                     p.set('name', xmlfile1)
                     el1 = ET.SubElement(p, 'testsuite' + re)
@@ -43,4 +41,6 @@ if __name__ == "__main__":
                     subel1 = ET.SubElement(el2, 'summary')
                     subel0.text = numb
                     subel1.text = nts
+
             ET.ElementTree(p).write(xmlfile, encoding="UTF-8", xml_declaration=True)
+        i += 1
