@@ -3,8 +3,8 @@ if __name__ == "__main__":
     import xml.etree.ElementTree as ET
     from poligon import getpath, getnames
 
-    dirName = 'completed-new-feature-test-runs'  # name of the directory where the checklists.csv are located
-    full_path = 'C:/Users/Серж/Desktop/testcases_CRP/scripts/' + dirName + '/'  # full path to the
+    dirName = 'first-run-sprint-20217-distributed-work'  # name of the directory where the checklists.csv are located
+    full_path = 'C:/Users/Серж/Desktop/testcases_CRP/scripts/completed-new-feature-test-runs/' + dirName + '/'  # full path to the
     # directory with checklists
 
     i = 0  # counter
@@ -16,7 +16,7 @@ if __name__ == "__main__":
         csvfile1 = csvFile['path'][i]
         xmlfile1 = str(filename[i])
         p = ET.Element('testsuite')
-        xmlfile = 'C:/Users/Серж/Desktop/testcases_CRP/converted_scripts/' + dirName + '/' + xmlfile1 + '.xml'
+        xmlfile = 'C:/Users/Серж/Desktop/testcases_CRP/converted_scripts/completed-new-feature-test-runs/' + dirName + '/' + xmlfile1 + '.xml'
         with open(csvfile1, 'r', newline='', encoding='utf-8') as rf, open(xmlfile, 'w', newline='', encoding='utf-8') as wf:
             reader = csv.DictReader(rf, delimiter=",")
 
