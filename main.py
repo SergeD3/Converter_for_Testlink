@@ -25,19 +25,21 @@ if __name__ == "__main__":
                 ind = row['indent']
                 txt = row['text']
                 nts = row['notes']
+                comment = ' | <strong>comment:</strong> ' + row['comment']
                 if int(ind) <= 1:
-                    p.set('name', xmlfile1)
+                    p.set('name', xmlfile1)  # set name for
                     el1 = ET.SubElement(p, 'testsuite' + re)
+                    el3 = ET.SubElement(el1, 'details')
                     el1.set('name', txt)
+                    el3.text = txt + ' | ' + nts + comment  # in case the value is too long for field name testlink
 
                 elif int(ind) > 1:
                     el2 = ET.SubElement(el1, 'testcase' + re)
                     el2.set('name', txt)
 #                    el2.set('internalid', ind)
-                    subel0 = ET.SubElement(el2, 'externalid')
+#                    subel0 = ET.SubElement(el2, 'externalid')
                     subel1 = ET.SubElement(el2, 'summary')
-#                    subel0.text = numb
-                    subel1.text = nts
+                    subel1.text = txt + ' | ' + nts + comment  # in case the value is too long for field name testlink
 
             ET.ElementTree(p).write(xmlfile, encoding="UTF-8", xml_declaration=True)
         i += 1
