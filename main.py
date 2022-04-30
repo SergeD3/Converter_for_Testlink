@@ -3,8 +3,8 @@ if __name__ == "__main__":
     import xml.etree.ElementTree as ET
     from poligon import getpath, getnames
 
-    dirName = 'storage-management-20212'  # name of the directory where the checklists.csv are located
-    full_path = 'C:/Users/Серж/Desktop/testcases_CRP/scripts/completed-new-feature-test-runs/' + dirName + '/'  # full path to the
+    dirName = 'completed-regression-test-runs'  # name of the directory where the checklists.csv are located
+    full_path = 'C:/Users/Серж/Desktop/testcases_CRP/scripts/' + dirName + '/'  # full path to the
     # directory with checklists
 
     i = 0  # counter
@@ -13,11 +13,11 @@ if __name__ == "__main__":
     filename = getnames(full_path)
 
     while i < len(filename):  # this loop iterates through all the files in the directory
-        csvfile1 = csvFile['path'][i]
+        csvfile1 = csvFile['path'][i]  # add filename
         xmlfile1 = str(filename[i])
         p = ET.Element('testsuite')
         a = 0
-        xmlfile = 'C:/Users/Серж/Desktop/testcases_CRP/converted_scripts/completed-new-feature-test-runs/' + dirName + '/' + xmlfile1 + '.xml'
+        xmlfile = 'C:/Users/Серж/Desktop/testcases_CRP/converted_scripts/' + dirName + '/' + xmlfile1 + '.xml'
         with open(csvfile1, 'r', newline='', encoding='utf-8') as rf, open(xmlfile, 'w', newline='', encoding='utf-8') as wf:
             reader = csv.DictReader(rf, delimiter=",")
 
@@ -34,7 +34,8 @@ if __name__ == "__main__":
                     el1 = ET.SubElement(p, 'testsuite' + re)
                     el3 = ET.SubElement(el1, 'details')
                     el1.set('name', txt)
-                    el3.text = '<strong>Desc:</strong> ' + txt + ' | ' + nts + comment  # in case the value is too long for field name testlink
+                    el3.text = '<strong>Desc:</strong> ' + txt + ' | ' + nts + comment  # in case the value is too
+                    # long for field name testlink
 
                 elif int(ind) > 1:
                     el2 = ET.SubElement(el1, 'testcase' + re)
@@ -42,7 +43,8 @@ if __name__ == "__main__":
 #                    el2.set('internalid', ind)
 #                    subel0 = ET.SubElement(el2, 'externalid')
                     subel1 = ET.SubElement(el2, 'summary')
-                    subel1.text = '<strong>Desc:</strong> ' + txt + nts + comment  # in case the value is too long for field name testlink
+                    subel1.text = '<strong>Desc:</strong> ' + txt + nts + comment  # in case the value is too
+                    # long for field name testlink
 
             ET.ElementTree(p).write(xmlfile, encoding="UTF-8", xml_declaration=True)
         i += 1
