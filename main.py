@@ -30,6 +30,7 @@ if __name__ == "__main__":
                 ind = row['indent']
                 txt = row['text']
                 nts = row['notes']
+                preconditions = row['preconditions']
                 a += 1
                 comment = ' | <strong>comment:</strong> ' + txt + f'|{a}|'
 
@@ -44,11 +45,11 @@ if __name__ == "__main__":
                 elif int(ind) > 1:
                     el2 = ET.SubElement(el1, 'testcase' + re)
                     el2.set('name', txt)
-#                    el2.set('internalid', ind)
-#                    subel0 = ET.SubElement(el2, 'externalid')
-                    subel1 = ET.SubElement(el2, 'summary')
-                    subel1.text = '<strong>Desc:</strong> ' + txt + nts + comment  # in case the value is too
+                    sub_el1 = ET.SubElement(el2, 'summary')
+                    sub_el1.text = '<strong>Desc:</strong> ' + txt + nts + comment  # in case the value is too
                     # long for field name test_link
+                    sub_el2 = ET.SubElement(sub_el1, 'preconditions')
+                    sub_el2.text = preconditions
 
             ET.ElementTree(p).write(xmlPath, encoding="UTF-8", xml_declaration=True)
         i += 1
