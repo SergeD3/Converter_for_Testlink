@@ -32,8 +32,8 @@ if __name__ == "__main__":
                 numb = row['number'] if row['number'] != '' or row['number'] is None else random.randrange(20, 100)
                 ind = row['indent'] if row['number'] != '' or row['number'] is None else random.randrange(20, 100)
                 txt = str(row['text'])
-                nts = 'Notes: ' + str(row['notes'])
-                comment = ' | <p><strong>Comment:</strong></p> ' + txt + f'|{a}|'
+                nts = '<p><strong>Notes:</strong></p> ' + str(row['notes'])
+                comment = '<p><strong>Comment:</strong></p> ' + txt + f'|{a}|'
                 preconditions = '<p><strong>' + str(row['preconditions']) + '</strong></p>'
                 a += 1
 
